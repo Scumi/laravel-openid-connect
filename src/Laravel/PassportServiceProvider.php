@@ -38,6 +38,7 @@ class PassportServiceProvider extends Passport\PassportServiceProvider
         $this->loadRoutesFrom(__DIR__."/routes/web.php");
 
         $this->registerClaimExtractor();
+        $this->registerAuthorizationServer();
     }
 
     public function makeAuthorizationServer(): AuthorizationServer
